@@ -15,7 +15,8 @@ MODEL_PATH = "app/model_klasifikasi_sampah.keras"
 if not os.path.exists(MODEL_PATH):
     print("Model belum ada, mendownload dari Google Drive...")
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
-    gdown.download(id=GDRIVE_FILE_ID, output=MODEL_PATH, quiet=False, fuzzy=True)
+    gdown.download(f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}", MODEL_PATH, quiet=False)
+
 
 
 # === LOAD MODEL ===
